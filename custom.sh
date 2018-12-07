@@ -2,12 +2,12 @@
 # script de customizacao (wave linux)
 # 06/12/2018
 # authores (ondatec, celo)
-VERSION=0.0.1
+VERSION=0.0.2
 GRUBIMG="/usr/share/images/desktop-base/desktop-grub.png"
 if [[ $UID != 0 ]]
 then
     echo "Just root user can run this script"
-    #exit 0;
+    exit 0;
 fi
 #verifica conecção
 online(){
