@@ -4,6 +4,9 @@
 # authores (ondatec, celo)
 VERSION=0.0.2
 GRUBIMG="/usr/share/images/desktop-base/desktop-grub.png"
+DPACKS=(
+    
+)
 if [[ $UID != 0 ]]
 then
     echo "Rode como root."
@@ -19,6 +22,12 @@ else
 fi
 }
 online
+download() {
+    for i in ${*}
+    do
+    wget ${1} -O ${2}
+    done
+}
 #lista de programas
 PRG=(gimp inkscape geany firefox-esr vim)
 install(){
